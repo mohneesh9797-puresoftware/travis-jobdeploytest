@@ -7,4 +7,12 @@ matrix:
     - os: linux-ppc64le
       dist: xenial
       sudo: required
-script: uname -m
+    - os: linux
+      dist: xenial
+      sudo: false
+    - os: linux
+      dist: xenial
+      sudo: required
+script:
+  - if [ "$TRAVIS_OS_NAME" == "linux-ppc64le" ]; then arch; fi
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then arch; fi
