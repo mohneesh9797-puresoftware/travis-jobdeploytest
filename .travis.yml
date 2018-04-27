@@ -12,5 +12,5 @@ matrix:
       sudo: false
    
 script:
-  - if [ "$TRAVIS_OS_NAME" == "linux-ppc64le" ]; then arch; fi
+  - if [ "$TRAVIS_OS_NAME" == "linux-ppc64le" ]; then whoami; fi
   - if [ "$TRAVIS_OS_NAME" == "linux" ]; then arch; fi
