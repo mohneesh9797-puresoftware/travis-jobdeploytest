@@ -4,12 +4,12 @@ matrix:
     - os: linux-ppc64le # power queue name
       dist: xenial      # power jobs only on ubuntu-xenial distribution
       sudo: false       # deploy on workers with docker backend
-    - os: linux-ppc64le
-      dist: xenial
-      sudo: required    # deploy on workers with openstack backend
-    - os: linux         # Intel queue name
-      dist: xenial
-      sudo: false
+   # - os: linux-ppc64le
+   #   dist: xenial
+   #   sudo: required    # deploy on workers with openstack backend
+    #- os: linux         # Intel queue name
+    #  dist: xenial
+    #  sudo: false
    
 script:
   - if [ "$TRAVIS_OS_NAME" == "linux-ppc64le" ]; then whoami ; fi
