@@ -1,6 +1,13 @@
 language: bash
-arch: power
-os: linux
+
+matrix:
+  include:
+   - os: linux
+     arch: amd64
+   - os: linux
+     arch: arm64
+   - os: linux
+     arch: power
    
 script:
   - if [ "$TRAVIS_ARCH" == "ppc64le" ]; then whoami ; fi
