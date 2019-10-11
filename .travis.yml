@@ -7,7 +7,7 @@ matrix:
    - os: linux
      arch: arm64
    - os: linux
-     arch: power
+     arch: ppc64le
    
 script:
   - if [ "$TRAVIS_ARCH" == "ppc64le" ]; then whoami ; fi
