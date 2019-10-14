@@ -8,6 +8,8 @@ matrix:
      arch: arm64
    - os: linux
      arch: ppc64le
+   - os: linux
+     arch: s390x
    
 script:
   - if [ "$TRAVIS_ARCH" == "ppc64le" ]; then whoami ; fi
